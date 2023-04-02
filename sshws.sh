@@ -68,10 +68,11 @@ MYIP=$(wget -qO- ipinfo.io/ip);
 
 
 #install websocket service
-chmod +x websocket/ins-ws.sh && ./websocket/ins-ws.sh
+wget -O ins-ws.sh "https://${ghrepo}/websocket/ins-ws.sh"
+chmod +x ins-ws.sh && ./ins-ws.sh
 
 # install udpgateway
-mv udpgw/badvpn-udpgw /usr/bin/badvpn-udpgw
+wget -O /usr/bin/badvpn-udpgw "https://${ghrepo}/udpgw/badvpn-udpgw64"
 chmod +x /usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
@@ -84,8 +85,8 @@ screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 500
 #install xray
 #wget https://${akbarvpnnnnnn}/ins-xray.sh && chmod +x ins-xray.sh && screen -S xray ./ins-xray.sh
 
-
 history -c
+rm -f ins-ws.sh
 netstat -tunlp
-rm -f setup.sh
+
 
