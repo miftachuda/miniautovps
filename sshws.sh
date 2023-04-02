@@ -65,6 +65,7 @@ apt install python -y
 # Get IP
 echo "Checking VPS"
 MYIP=$(wget -qO- ipinfo.io/ip);
+echo MYIP
 
 
 #install websocket service
