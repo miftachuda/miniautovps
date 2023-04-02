@@ -10,7 +10,7 @@ PURPLE='\033[0;35m'
 CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
-
+ghrepo="raw.githubusercontent.com/miftachuda/miniautovps/master/"
 
 # ==========================================
 # disable ipv6 seq

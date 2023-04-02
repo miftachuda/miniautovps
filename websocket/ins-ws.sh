@@ -1,5 +1,6 @@
 #!/bin/bash
 # ==========================================
+ghrepo="raw.githubusercontent.com/miftachuda/miniautovps/master/"
 
 # Setup WS nontls Service
 wget -O /usr/local/bin/ws-nontls "https://${ghrepo}/websocket/ws-nontls"
