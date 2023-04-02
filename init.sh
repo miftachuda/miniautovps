@@ -8,6 +8,5 @@ if [ "$(systemd-detect-virt)" == "openvz" ]; then
 fi
 
 chmod +x sshws.sh && ./sshws.sh
-rm -f ./sshws.sh
 
 # wget https://github.com/miftachuda/Autovps/raw/master/xray/addtrojan.sh && chmod +x addtrojan.sh && ./addtrojan.sh && rm -f ./addtrojan.sh

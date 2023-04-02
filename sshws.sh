@@ -68,10 +68,10 @@ MYIP=$(wget -qO- ipinfo.io/ip);
 
 
 #install websocket service
-chmod +x ./websocket/ins-ws.sh && ./websocket/ins-ws.sh
+chmod +x websocket/ins-ws.sh && ./websocket/ins-ws.sh
 
 # install udpgateway
-mv ./udpgw/badvpn-udpgw /usr/bin/badvpn-udpgw
+mv udpgw/badvpn-udpgw /usr/bin/badvpn-udpgw
 chmod +x /usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
